@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "styled-components/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Main } from "../screens";
+import { Main, Community, Market, Profile } from "../screens";
 import { Ionicons, MaterialIcons, AntDesign } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
@@ -78,7 +78,7 @@ const MainTab = () => {
         component={Market}
         options={{
           tabBarIcon: ({ focused }) =>
-            TabBarIconMaterialIcons({
+            TabBarIconAntDesign({
               focused,
               name: "shoppingcart",
             }),

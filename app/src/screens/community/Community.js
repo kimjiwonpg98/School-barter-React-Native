@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import styled from "styled-components/native";
 import { ScrollView, Text } from "react-native";
 
-import { ReadyContext } from "../contexts";
+import { ReadyContext } from "../../contexts";
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -13,7 +13,7 @@ const Container = styled.SafeAreaView`
   padding: 0;
 `;
 
-const Main = () => {
+const Community = () => {
   const { readyDispatch } = useContext(ReadyContext);
 
   useEffect(() => {
@@ -22,9 +22,9 @@ const Main = () => {
 
   return (
     <Container>
-      <Text>메인화면</Text>
+      <Text>커뮤니티</Text>
     </Container>
   );
 };
 
-export default Main;
+export default Community;
