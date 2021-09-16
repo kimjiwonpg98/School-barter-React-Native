@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { Image } from "react-native";
+import { StatusBar, Image } from "react-native";
 import AppLoading from "expo-app-loading";
 import { Asset } from "expo-asset";
 import * as Font from "expo-font";
+import { ThemeProvider } from "styled-components/native";
 
+import { theme } from "./theme";
 import Navigation from "./navigations";
+import { ProgressProvider, ReadyProvider, StudentProvider } from "./contexts";
 
 //앱 아이콘 로딩화면
 const cacheImages = (images) => {
@@ -34,7 +37,16 @@ const App = () => {
   };
 
   return isReady ? (
-    <Navigation />
+    <ThemeProvider theme={theme}>
+      <StudentProvider>
+        <ProgressProvider>
+          <ReadyProvider>
+            <StatusBar barStyle="dark-content" />
+            <Navigation />
+          </ReadyProvider>
+        </ProgressProvider>
+      </StudentProvider>
+    </ThemeProvider>
   ) : (
     <AppLoading
       startAsync={_loadAssets}
