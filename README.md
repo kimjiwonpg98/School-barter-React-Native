@@ -1,4 +1,4 @@
-# 🛒 SECOND-HANDS-MARKET
+# 🛒 SCHOOL-BARTER
 
 
 ## 🔗 커밋 전략
