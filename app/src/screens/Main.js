@@ -13,7 +13,7 @@ const Container = styled.SafeAreaView`
   padding: 0;
 `;
 
-const Main = ({ navigation }) => {
+const Main = () => {
   const { readyDispatch } = useContext(ReadyContext);
 
   useEffect(() => {
