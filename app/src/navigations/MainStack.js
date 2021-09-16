@@ -23,7 +23,7 @@ const MainStack = () => {
     <Stack.Navigator
       initialRouteName="Main"
       screenOptions={{
-        headerTitle: "IDU",
+        headerTitle: "School Barter",
         headerTitleStyle: {
           fontFamily: "BM_HANNA_PRO",
         },
@@ -32,7 +32,7 @@ const MainStack = () => {
         headerStyle: {
           height: 80,
           borderBottomWidth: 1,
-          borderBottomColor: theme.boardsButton,
+          borderBottomColor: theme.text,
         },
 
         cardStyle: { backgroundColor: theme.backgroundColor },
@@ -42,9 +42,9 @@ const MainStack = () => {
         name="Main"
         component={MainTab}
         options={{
-          headerTitle: "아이두",
+          headerTitle: "School Barter",
           headerTitleStyle: {
-            color: theme.headerTintColor,
+            color: theme.text,
             fontSize: 24,
             fontWeight: "bold",
             fontFamily: "BM_HANNA_PRO",

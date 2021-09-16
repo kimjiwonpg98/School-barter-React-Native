@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import styled from "styled-components/native";
-import { ScrollView, Text } from "react-native";
+import { Text } from "react-native";
 
 import { ReadyContext } from "../../contexts";
 
