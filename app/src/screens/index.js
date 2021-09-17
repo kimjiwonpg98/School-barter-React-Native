@@ -6,4 +6,6 @@ import Profile from "./profile/Profile";
 
 import Market from "./market/Market";
 
-export { Main, Community, Profile, Market };
+import Alert from "./alert/Alert";
+
+export { Main, Community, Profile, Market, Alert };

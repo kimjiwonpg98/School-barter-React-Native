@@ -6,9 +6,12 @@ import * as Font from "expo-font";
 
 import MainTab from "./MainTab";
 
+import { Alert } from "../screens";
+import AlertContainer from "../components/alert/AlertContainer";
+
 const Stack = createStackNavigator();
 
-const MainStack = () => {
+const MainStack = ({ navigation }) => {
   const [isFontReady, setIsFontReady] = useState(false);
 
   const theme = useContext(ThemeContext);
@@ -41,7 +44,7 @@ const MainStack = () => {
       <Stack.Screen
         name="Main"
         component={MainTab}
-        options={{
+        options={({ navigation }) => ({
           headerTitle: "School Barter",
           headerTitleStyle: {
             color: theme.text,
@@ -50,8 +53,10 @@ const MainStack = () => {
             fontFamily: "BM_HANNA_PRO",
           },
           headerTitleAlign: "left",
-        }}
+          headerRight: () => <AlertContainer navigation={navigation} />,
+        })}
       />
+      <Stack.Screen name="Alert" component={Alert} />
     </Stack.Navigator>
   ) : (
     <AppLoading
